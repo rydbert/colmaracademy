@@ -1,0 +1,308 @@
+/* Universal section */
+
+html {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Header section */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0;
+  position: fixed;
+  background-color: white;
+  min-width: 240px;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+header span {
+  font-weight: bold;
+}
+
+.grey {
+  color: grey;
+}
+
+nav {
+  padding-right: 1rem;
+  width: 100%;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+      display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav img {
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+/*  Gonna figure out how to do CSS positioning
+and get back to this
+
+header {
+    padding: 0.5rem 0;
+  }
+*/
+
+  nav img {
+    height: 2rem;
+  }
+}
+
+/* Main container, mostly to handle relative positioning?
+And maybe really large screen width? */
+.main {
+  margin: auto;
+  flex-direction: column;
+  position: relative;
+  padding-top: 4rem;
+}
+
+
+/* Banner section */
+
+.banner {
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.banner img {
+  padding: 2rem 1.5rem;
+  width: 60%;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #484848;
+  margin-right: 1.5rem;
+}
+
+.cta h1,
+.cta h2 {
+  margin: 0.75rem 0;
+}
+
+.button {
+  text-align: center;
+  width: 300px;
+  padding: 0.5rem 0;
+  background-color: #484848;
+  color: white;
+  margin: 0.75rem 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .banner {
+    flex-direction: column;
+  }
+  .banner img {
+    width: 100%;
+    padding: 0;
+  }
+  .cta {
+    margin: 1.5rem 0;
+  }
+
+  /* So apparently media queries can be nested */
+  @media only screen and (min-width: 660px) {
+    .cta {
+      text-align: center;
+      align-items: center;
+    }
+    .cta br {
+      display: none;
+    }
+  }
+}
+
+/* Info section */
+
+.info {
+  display: flex;
+}
+
+.quote {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+
+.info img {
+
+}
+
+
+.person {
+  font-size: 0.75rem;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.box {
+  display: flex;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  border-left: 1px solid lightgrey;
+}
+
+.box.orientation {
+  padding-top: 2rem;
+  border-bottom: 3px solid lightgrey;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.5rem;
+}
+
+.box img {
+  display: inline-block;
+  width: 35%;
+  height: 35%;
+}
+
+img.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .quote {
+    display: none;
+  }
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box-content {
+    width: 90%;
+  }
+
+/* Swapping in mobile images */
+  .box img {
+    display: none;
+  }
+  .box img.mobile {
+    display: inline-block;
+    width: 90%;
+    padding: 0 1rem;
+  }
+}
+
+.box a {
+  color: dodgerblue;
+}
+
+/* Footer section */
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 5rem;
+  padding-top: 1rem;
+  min-width: 240px;
+
+  position: relative;
+  top: 4rem;
+  width: 100%;
+  border-top: 1px solid grey;
+
+  font-size: 0.75rem;
+}
+
+footer span {
+  padding-left: 1.5rem;
+}
+
+footer .links ul {
+  padding-right: 1.5rem;
+}
+
+footer .links ul li {
+  display: inline-block;
+  padding-left: 0.75rem;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    padding-top: 2.5rem;
+    height: 2rem;
+  }
+  footer .links {
+    display: none;
+  }
+
+}
