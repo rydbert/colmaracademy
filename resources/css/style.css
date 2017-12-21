@@ -396,8 +396,8 @@ img.mobile {
 
 .subject {
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  /* This was the most difficult part for me to get right,
+  I'm still not sure how this flex works */
   flex-basis: 300px;
   flex-grow: 1;
   margin: 1rem;
