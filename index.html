@@ -4,31 +4,44 @@
     <title>Colmar Academy</title>
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-</head>
+    <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+  </head>
+
 <body>
+
+<!-- Header section -->
+
   <header>
     <div class="logo">
-      <img src="resources/images/ic-logo.svg">
+      <img src="resources/images/ic-logo.svg" alt="Colmar Academy logo">
       <span class="bold">COLMAR</span>
       <span class="grey">ACADEMY</span>
     </div>
     <nav>
-      <ul>
+      <ul role="presentation">
         <li><a href="#">On campus</a></li>
         <li><a href="#">Online for companies</a></li>
         <li><a href="#">Sign in</a></li>
       </ul>
-      <ul class="mobile-nav">
-        <li><img href="#" src="./resources/images/ic-logo.svg"></li>
-        <li><a href="#"><img href="#" src="./resources/images/ic-on-campus.svg"></a></li>
-        <li><a href="#"><img href="#" src="./resources/images/ic-online.svg"></a></li>
-        <li><a href="#"><img href="#" src="./resources/images/ic-login.svg"></a></li>
+
+      <!-- Mobile header section -->
+
+      <ul class="mobile-nav" role="presentation">
+        <li><img href="#" src="./resources/images/ic-logo.svg" alt="Colmar Academy logo"></li>
+        <li><a href="#"><img href="#" src="./resources/images/ic-on-campus.svg" alt="On Campus icon"></a></li>
+        <li><a href="#"><img href="#" src="./resources/images/ic-online.svg" alt="Online icon"></a></li>
+        <li><a href="#"><img href="#" src="./resources/images/ic-login.svg" alt="Login icon"></a></li>
       </ul>
     </nav>
   </header>
+
   <div class="main">
+
+    <!-- Banner section -->
+
     <div class="banner">
-      <img src="./resources/images/banner.jpg">
+      <img src="./resources/images/banner.jpg" alt="Photo of students">
       <div class="cta">
         <h1>Learn something <br>new every day</h1>
         <h2>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</h2>
@@ -37,55 +50,148 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="info">
-    <div class="quote">
-      <img src="./resources/images/information-main.jpg">
-      <h1>It doesn't hurt to keep practicing</h1>
-      <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.</p>
-      <p class="person">Emanuel, Sr Strategist at Hiring.com</p>
+
+    <!-- Info section -->
+
+    <div class="info">
+      <div class="quote">
+        <img src="./resources/images/information-main.jpg" alt="Photo of a student">
+        <h1>It doesn't hurt to keep practicing</h1>
+        <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.</p>
+        <p class="person">Emanuel, Sr Strategist at Hiring.com</p>
+      </div>
+      <div class="box-container">
+        <div class="box orientation">
+          <img src="./resources/images/information-orientation.jpg" alt="Orientation photo">
+          <img class="mobile" src="./resources/images/information-orientation-mobile.jpg" alt="Orientation photo">
+          <div class="box-content">
+            <h2>Orientation date</h2>
+            <p>Tue 10/11 &amp Wed 10/12: 8am-3pm</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="box campus">
+          <img src="./resources/images/information-campus.jpg" alt="Campus photo">
+          <img class="mobile" src="./resources/images/information-campus-mobile.jpg" alt="Campus photo">
+          <div class="box-content">
+            <h2>Our campus</h2>
+            <p>Find which campus is close by you</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="box guest">
+          <img src="./resources/images/information-guest-lecture.jpg" alt="Guest lecturer photo">
+          <img class="mobile" src="./resources/images/information-guest-lecture-mobile.jpg" alt="Guest lecturer photo">
+          <div class="box-content">
+            <h2>Our guest lecture</h2>
+            <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="box-container">
-      <div class="box orientation">
-        <img src="./resources/images/information-orientation.jpg">
-        <img class="mobile" src="./resources/images/information-orientation-mobile.jpg">
-        <div class="box-content">
-          <h2>Orientation date</h2>
-          <p>Tue 10/11 &amp Wed 10/12: 8am-3pm</p>
-          <a href="#">Read more</a>
+
+    <!-- Courses section -->
+
+    <div class="courses">
+      <h1>Start learning</h1>
+      <div class="course-container">
+        <div class="subject">
+          <img src="./resources/images/course-software.jpg" alt="Software subject photo">
+          <div class="course-description">
+            <h2>Software engineering</h2>
+            <p>COURSES</p>
+            <p>Web Development, Mobile Development, IoT, APIs</p>
+          </div>
         </div>
-      </div>
-      <div class="box campus">
-        <img src="./resources/images/information-campus.jpg">
-        <img class="mobile" src="./resources/images/information-campus-mobile.jpg">
-        <div class="box-content">
-          <h2>Our campus</h2>
-          <p>Find which campus is close by you</p>
-          <a href="#">Read more</a>
+        <div class="subject">
+          <img src="./resources/images/course-computer-art.jpg" alt="Computer art subject photo">
+          <div class="course-description">
+            <h2>Computer art</h2>
+            <p>COURSES</p>
+            <p>Imaging &amp Design, Web Design, Motion Graphics &amp Visual Effects, Computer Animation</p>
+            </div>
         </div>
-      </div>
-      <div class="box guest">
-        <img src="./resources/images/information-guest-lecture.jpg">
-        <img class="mobile" src="./resources/images/information-guest-lecture-mobile.jpg">
-        <div class="box-content">
-          <h2>Our guest lecture</h2>
-          <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-          <a href="#">Read more</a>
+        <div class="subject">
+          <img src="./resources/images/course-design.jpg" alt="Design subject photo">
+          <div class="course-description">
+            <h2>Design</h2>
+            <p>COURSES</p>
+            <p>User Experience Design, User Research, Visual Design</p>
+          </div>
+        </div>
+        <div class="subject">
+          <img src="./resources/images/course-data.jpg" alt="Data subject photo">
+          <div class="course-description">
+            <h2>Data</h2>
+            <p>COURSES</p>
+            <p>Data Science, Big Data, SQL, Data Visualization</p>
+          </div>
+        </div>
+        <div class="subject">
+          <img src="./resources/images/course-business.jpg" alt="Business subject photo">
+          <div class="course-description">
+            <h2>Business</h2>
+            <p>COURSES</p>
+            <p>Product Development, Business Development, Startup</p>
+          </div>
+        </div>
+        <div class="subject">
+          <img src="./resources/images/course-marketing.jpg" alt="Marketing subject photo">
+          <div class="course-description">
+            <h2>Marketing</h2>
+            <p>COURSES</p>
+            <p>Analytics, Content Marketing, Mobile Marketing</p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Originally made a mobile version of Courses section
+    here but figured I might as well just use CSS -->
+
+    <!-- Thesis section -->
+
+    <div class="thesis">
+      <h1>Thesis exhibit</h1>
+      <div class="exhibit">
+        <div class="video">
+          <video src="./resources/videos/thesis.mp4"></video>
+          <h2>Reimagine urban</h2>
+          <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.</p>
+        </div>
+        <div class="box-container">
+          <div class="box fisma">
+            <img src="./resources/images/thesis-fisma.jpg" alt="FISMA thesis photo">
+            <div class="box-content">
+              <h2>Fisma: Design and Prototype</h2>
+              <p>Designer showcase of new prototype product</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./resources/images/thesis-now-and-then.jpg" alt="Now and Then thesis photo">
+            <div class="box-content">
+              <h2>Now and then</h2>
+              <p>Research study about New York</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+
+    <footer>
+      <!-- I'm not sure about the 'roles' and whether I
+      should really care. Is copyright a "note"? Maybe?? -->
+      <span role="note">© 2016 Colmar Academy. All rights reserved.</span>
+      <div class="links">
+        <ul role="presentation">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+    </footer>
   </div>
-  <div class="courses">
-  </div>
-  <div class="exhibit">
-  </div>
-  <footer>
-    <span>© 2016 Colmar Academy. All rights reserved.</span>
-    <div class="links">
-      <ul>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-  </footer>
+  <!-- End of .main div containing everything except the header -->
 </body>
 </html>

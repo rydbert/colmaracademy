@@ -10,11 +10,20 @@ html {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+
 body {
   margin: 0;
   background-color: whitesmoke;
   font-family: Helvetica;
   line-height: 1.4;
+  color: #424242;
+  /*Seems like the site uses some form of off-black*/
 }
 
 h1 {
@@ -43,7 +52,7 @@ header {
   position: fixed;
   color: black;
   background-color: white;
-  min-width: 240px;
+  min-width: 285px;
   font-size: 1rem;
   z-index: 1;
 }
@@ -68,7 +77,6 @@ header {
 }
 
 nav {
-  padding-right: 1rem;
   width: 100%;
   text-align: right;
 }
@@ -78,16 +86,40 @@ nav ul li {
   padding: 0 0.5rem;
 }
 
+/* Adding a little "button" to distinguish the 'Sign in' link*/
+nav ul li:last-child {
+  margin-right: 1rem;
+  border-radius: 5px;
+  background-color: gold;
+}
+
+/* Experimenting with pseudo-classes
+nav ul li:last-child:hover {
+  box-shadow: 2px 2px 2px #888888;
+}
+*/
+
 .mobile-nav {
   display: none;
 }
 
+/* Squeezing the text to get a bit more use of nav bar */
 @media only screen and (max-width: 600px) {
+  header {
+    font-size: 14px;
+  }
+}
+
+/* Swapping to mobile nav bar */
+@media only screen and (max-width: 530px) {
   .logo {
       display: none;
   }
   nav ul {
     display: none;
+  }
+  nav ul li:last-child {
+    background: inherit;
   }
   .mobile-nav {
     display: flex;
@@ -99,27 +131,35 @@ nav ul li {
   }
 }
 
+/* An even tinier version of the nav bar */
 @media only screen and (max-width: 360px) {
-/*  Gonna figure out how to do CSS positioning
-and get back to this
-
-header {
-    padding: 0.5rem 0;
+  header {
+    padding: 0.5rem 0 0 0;
   }
-*/
-
   nav img {
     height: 2rem;
   }
+
+  .main {
+    padding-top: 3rem;
+  }
 }
+
 
 /* Main container, mostly to handle relative positioning?
 And maybe really large screen width? */
 .main {
+  min-width: 285px;
   margin: auto;
   flex-direction: column;
   position: relative;
   padding-top: 4rem;
+}
+
+@media only screen and (max-width: 360px) {
+  .main {
+    padding-top: 2.5rem;
+  }
 }
 
 
@@ -141,7 +181,7 @@ And maybe really large screen width? */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #484848;
+  color: #4a4a4a;
 }
 
 .cta h2 {
@@ -153,7 +193,7 @@ And maybe really large screen width? */
   text-align: center;
   width: 300px;
   padding: 0.75rem 0; /*Instruction says 0.5rem but that's clearly too flat */
-  background-color: #484848;
+  background-color: #4a4a4a;
   color: white;
 }
 
@@ -171,17 +211,29 @@ And maybe really large screen width? */
   }
 
   /* So apparently media queries can be nested */
-  @media only screen and (min-width: 660px) {
+  @media only screen and (min-width: 700px) {
     .cta {
       text-align: center;
       align-items: center;
     }
+    /* Using a linebreak to 'balance' the text, but
+    not displayed in a certain interval */
     .cta br {
       display: none;
     }
   }
-}
 
+  @media only screen and (max-width: 360px) {
+    .cta {
+      width: auto;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .button {
+      width: auto;
+    }
+  }
+}
 
 
 /* Info section */
@@ -221,6 +273,14 @@ And maybe really large screen width? */
 .box {
   display: flex;
   padding: 1rem;
+  border-bottom: 1px solid lightgrey;
+
+  transition: background-color 1s;
+}
+
+/* Switches box color on mouse hover */
+.box:hover {
+  background-color: lightgrey;
 }
 
 .box p {
@@ -229,12 +289,14 @@ And maybe really large screen width? */
 
 .box.orientation {
   padding-top: 2rem;
-  border-bottom: 3px solid lightgrey;
+/* Spec has border-bottom: 3px double lightgrey; but it's ugly */
 }
 
+/* In spec, switched to :hover for all boxes
 .box.guest {
   background-color: lightgrey;
 }
+*/
 
 .box-content {
   display: flex;
@@ -264,26 +326,31 @@ img.mobile {
     flex-direction: column;
     align-items: center;
     padding: 0 1rem;
+    border-bottom: none;
+  }
+
+  .box:hover {
+    background-color: inherit;
   }
 
   .box.orientation {
-    border-bottom: none;
     padding-top: 1rem;
   }
   .box.campus {
     margin: 3rem 0;
   }
-  .box.guest {
-    background-color: inherit;
-  }
   .box-content {
     width: 100%;
-    margin: auto; /* <-- not sure how or why this works */
-    padding: 1rem 1rem;
+    margin: auto; /* still not totally sure how this works */
+    padding: 1rem 0rem 1rem 1rem;
+  }
+
+  .box-container .box:last-child {
+    margin-bottom: 1rem;
   }
 
 /* Swapping in mobile images */
-  .box img {
+  .info .box img {
     display: none;
   }
   .box img.mobile {
@@ -296,6 +363,163 @@ img.mobile {
   color: dodgerblue;
 }
 
+
+
+/* Courses section */
+
+.thesis h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.courses {
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3.5rem;
+}
+
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.subject {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  flex-grow: 1;
+  margin: 1rem;
+
+  transition: box-shadow 1s;
+}
+
+/* Transitions into a shadow around
+the subject box on mouse hover */
+.subject:hover {
+  box-shadow: 0px 0px 30px #444444;
+}
+
+/* Had trouble getting these imgs to show right */
+.subject img {
+  width: 100%;
+}
+
+.course-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.course-description h2,
+.course-description p {
+  margin-bottom: 0.5rem;
+}
+
+.course-description p {
+  color: grey;
+}
+
+.courses.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .courses {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    padding: 2rem 1rem;
+  }
+
+  .courses .course-container {
+    display: block;
+    min-width: 170px;
+  }
+  .courses h1{
+    margin-bottom: 0.5rem;
+  }
+
+  .subject img,
+  .subject p {
+    display: none;
+  }
+
+  .subject {
+    width: 100%;
+    background-color: lightgrey;
+    margin: 0.5rem 0 0 0;
+    border-radius: 2px; /* Softening the corners a teeny bit */
+  }
+
+  /* What was an okay shadow for the big .subject boxes
+  became overpowering in this format */
+  .subject:hover {
+    box-shadow: 0px 0px 8px #666666;
+  }
+}
+
+
+/* Thesis section - much of it reused from info section */
+
+.exhibit {
+  display: flex;
+}
+
+.thesis h1 {
+  text-align: center;
+}
+
+/* I guess I should have come up with a better name for this div */
+.video {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+
+.video video {
+  align-items: flex-start;
+  width: 100%;
+}
+
+.video h2 {
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Dropping the border from info section but keeping hover effect */
+.thesis .box {
+  border-bottom: none;
+  border-radius: 2px;
+}
+
+.box.fisma {
+  margin-top: 2rem;
+/* In spec, switched to :hover for all boxes
+  background-color: lightgrey; */
+}
+
+@media only screen and (max-width: 800px) {
+  .video {
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
+  .video h2,
+  .video p {
+    display: none;
+  }
+  .thesis .box-container {
+    display: none;
+  }
+}
 
 
 /* Footer section */
