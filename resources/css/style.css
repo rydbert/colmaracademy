@@ -22,8 +22,7 @@ body {
   background-color: whitesmoke;
   font-family: Helvetica;
   line-height: 1.4;
-  color: #424242;
-  /*Seems like the site uses some form of off-black*/
+  color: #4a4a4a;
 }
 
 h1 {
@@ -37,7 +36,7 @@ h2 {
 }
 
 a {
-  color: black;
+  color: #4a4a4a;
   text-decoration: none;
 }
 
@@ -50,16 +49,18 @@ header {
   width: 100%;
   padding: 1rem 0;
   position: fixed;
-  color: black;
   background-color: white;
   min-width: 285px;
   font-size: 1rem;
   z-index: 1;
+  font-weight: 600;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  font-size: 1.25rem;
+  font-family: Montserrat, Helvetica, sans-serif;
 }
 
 .logo img {
@@ -88,9 +89,10 @@ nav ul li {
 
 /* Adding a little "button" to distinguish the 'Sign in' link*/
 nav ul li:last-child {
+  padding: 0.6rem 0.8rem;
   margin-right: 1rem;
   border-radius: 5px;
-  background-color: gold;
+  background-color: #FFE700;
 }
 
 /* Experimenting with pseudo-classes
@@ -104,14 +106,20 @@ nav ul li:last-child:hover {
 }
 
 /* Squeezing the text to get a bit more use of nav bar */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
   header {
     font-size: 14px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  nav ul li:first-child {
+    padding: 0;
   }
 }
 
 /* Swapping to mobile nav bar */
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 580px) {
   .logo {
       display: none;
   }
@@ -181,7 +189,6 @@ And maybe really large screen width? */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #4a4a4a;
 }
 
 .cta h2 {
