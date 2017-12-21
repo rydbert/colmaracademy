@@ -10,13 +10,6 @@ html {
   }
 }
 
-@media only screen and (max-width: 360px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-
 body {
   margin: 0;
   background-color: whitesmoke;
@@ -50,7 +43,7 @@ header {
   padding: 1rem 0;
   position: fixed;
   background-color: white;
-  min-width: 285px;
+  min-width: 360px;
   font-size: 1rem;
   z-index: 1;
   font-weight: 600;
@@ -105,21 +98,19 @@ nav ul li:last-child:hover {
   display: none;
 }
 
-/* Squeezing the text to get a bit more use of nav bar */
+/* Squeezing the text to get a bit more use of nav bar
 @media only screen and (max-width: 670px) {
   header {
     font-size: 14px;
-  }
-  .logo {
-    font-size: 1rem;
   }
   nav ul li:first-child {
     padding: 0;
   }
 }
+*/
 
 /* Swapping to mobile nav bar */
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 670px) {
   .logo {
       display: none;
   }
@@ -139,7 +130,7 @@ nav ul li:last-child:hover {
   }
 }
 
-/* An even tinier version of the nav bar */
+/* An even tinier version of the nav bar, not used
 @media only screen and (max-width: 360px) {
   header {
     padding: 0.5rem 0 0 0;
@@ -152,21 +143,21 @@ nav ul li:last-child:hover {
     padding-top: 3rem;
   }
 }
-
+*/
 
 /* Main container, mostly to handle relative positioning?
 And maybe really large screen width? */
 .main {
-  min-width: 285px;
+  min-width: 360px;
   margin: auto;
   flex-direction: column;
   position: relative;
   padding-top: 4rem;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 670px) {
   .main {
-    padding-top: 2.5rem;
+    padding-top: 6rem;
   }
 }
 
@@ -199,7 +190,7 @@ And maybe really large screen width? */
 .button {
   text-align: center;
   width: 300px;
-  padding: 0.75rem 0; /*Instruction says 0.5rem but that's clearly too flat */
+  padding: 0.75rem 0;
   background-color: #4a4a4a;
   color: white;
 }
@@ -227,17 +218,6 @@ And maybe really large screen width? */
     not displayed in a certain interval */
     .cta br {
       display: none;
-    }
-  }
-
-  @media only screen and (max-width: 360px) {
-    .cta {
-      width: auto;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-    .button {
-      width: auto;
     }
   }
 }
@@ -331,7 +311,6 @@ img.mobile {
   }
   .box {
     flex-direction: column;
-    align-items: center;
     padding: 0 1rem;
     border-bottom: none;
   }
@@ -347,8 +326,6 @@ img.mobile {
     margin: 3rem 0;
   }
   .box-content {
-    width: 100%;
-    margin: auto; /* still not totally sure how this works */
     padding: 1rem 0rem 1rem 1rem;
   }
 
