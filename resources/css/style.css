@@ -265,7 +265,7 @@ And maybe really large screen width? */
   transition: background-color 1s;
 }
 
-/* Switches box color on mouse hover */
+/* Switches box color on cursor hover */
 .box:hover {
   background-color: lightgrey;
 }
@@ -279,7 +279,7 @@ And maybe really large screen width? */
 /* Spec has border-bottom: 3px double lightgrey; but it's ugly */
 }
 
-/* In spec, switched to :hover for all boxes
+/* From spec, but I switched to :hover for all boxes
 .box.guest {
   background-color: lightgrey;
 }
@@ -383,7 +383,7 @@ img.mobile {
 }
 
 /* Transitions into a shadow around
-the subject box on mouse hover */
+the subject box on cursor hover */
 .subject:hover {
   box-shadow: 0px 0px 30px #444444;
 }
@@ -424,7 +424,6 @@ the subject box on mouse hover */
 
   .courses .course-container {
     display: block;
-    min-width: 170px;
   }
   .courses h1{
     margin-bottom: 0.5rem;
@@ -460,7 +459,7 @@ the subject box on mouse hover */
   text-align: center;
 }
 
-/* I guess I should have come up with a better name for this div */
+/* Maybe I should have come up with a better name for this div */
 .video {
   width: 60%;
   display: flex;
@@ -469,12 +468,10 @@ the subject box on mouse hover */
 }
 
 .video video {
-  align-items: flex-start;
   width: 100%;
 }
 
 .video h2 {
-  text-align: left;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -487,8 +484,6 @@ the subject box on mouse hover */
 
 .box.fisma {
   margin-top: 2rem;
-/* In spec, switched to :hover for all boxes
-  background-color: lightgrey; */
 }
 
 @media only screen and (max-width: 800px) {
@@ -514,11 +509,8 @@ footer {
   justify-content: space-between;
   height: 5rem;
   padding-top: 1rem;
-  min-width: 240px;
-
   width: 100%;
   border-top: 1px solid lightgrey;
-
   font-size: 0.75rem;
 }
 
